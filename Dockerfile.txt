@@ -1,0 +1,14 @@
+# Python Environment
+FROM python:3.8-slim AS base
+
+# Create directory
+WORKDIR /20I-0782_Task_04
+
+# Copy from repo into the created directory
+COPY . .
+
+# Install packages
+RUN pip install -r requirements.txt
+
+# Run Command
+CMD ["python", "20I-0782_Task_04.py"]
